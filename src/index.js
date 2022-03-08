@@ -8,9 +8,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          {/* <Route index element={<Todo />} />
-          <Route path="todo" element={<Todo />} /> */}
-          
+
         </Route>
       </Routes>
     </BrowserRouter>

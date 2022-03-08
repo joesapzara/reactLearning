@@ -4,26 +4,8 @@ import Accordion from "./components/Accordion";
 
 
 const Layout = () => {
-    const todoValue = "";
     const count = 2;
 
-    const tdata = [
-        {
-            text: "Learn about React",
-            isCompleted: false,
-            key: 0
-        },
-        {
-            text: "Meet friend for lunch",
-            isCompleted: true,
-            key: 1
-        },
-        {
-            text: "Build really cool todo app",
-            isCompleted: false,
-            key: 2
-        }
-    ]
     const [name, setName] = useState("");
 
     const [todo, setTODO] = React.useState([
@@ -94,5 +76,3 @@ const Layout = () => {
 
 export default Layout;
 
-//Take react component and show it
-         //   ReactDOM.render(<App />, document.querySelector('#root'))
