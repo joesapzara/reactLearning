@@ -23,8 +23,10 @@ const Todo = () => {
 
     }]);
     const addToDo = () => {
+        var cnt=count+1;
+        setCount(cnt);
         const temp = [...rows, {
-            id: count + 1,
+            id: count,
             text: name,
             isCompleted: "Yet to be completed"
         }];
