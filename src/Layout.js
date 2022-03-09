@@ -46,7 +46,7 @@ const Layout = () => {
 
                         <div className="ui input focus">
                             <center> <input type="text" value={name}
-                                onChange={(e) => setName(e.target.value)} /> </center>
+                                onChange={(event) => setName(event.target.value)} /> </center>
                         </div>
                         <span> </span>
                         <button className="ui primary button" onClick={addToDo} >
