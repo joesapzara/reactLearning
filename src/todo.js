@@ -24,7 +24,7 @@ const Todo = () => {
 
     }]);
     const addToDo = () => {
-        var cnt = count + 1;
+        const cnt = count + 1;
         setCount(cnt);
         const temp = [...rows, {
             id: count,
