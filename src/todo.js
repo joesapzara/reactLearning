@@ -11,6 +11,7 @@ import Grid from "@material-ui/core/Grid";
 
 
 const Todo = () => {
+    
     const columns = [
         { field: 'id', headerName: 'S.No', width: 150, editable: false },
         { field: 'text', headerName: 'Task', width: 600, editable: true },
@@ -31,6 +32,7 @@ const Todo = () => {
             isCompleted: "Yet to be completed"
         }];
         setRows(temp)
+        setName("");
     }
     const [name, setName] = useState("");
     const [count, setCount] = useState(2);
@@ -52,7 +54,7 @@ const Todo = () => {
                 </AppBar>
                 <br /><br /><br /><br /><br />
             </Box>
-            <Grid container justify="center">
+            <Grid container justifyContent="center">
                 <TextField value={name}
                     onChange={(event) => setName(event.target.value)} id="filled-basic" sx={{ flexGrow: 1, alignSelf: 'flex-center', width: '100vh' }} label="Task to be done" variant="outlined" />
                 &nbsp;  &nbsp;  &nbsp;  &nbsp;
