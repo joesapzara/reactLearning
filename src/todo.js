@@ -8,13 +8,13 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { DataGrid } from '@mui/x-data-grid';
 import Grid from "@material-ui/core/Grid";
-
+import Container from '@mui/material/Container';
 
 const Todo = () => {
-    
+
     const columns = [
-        { field: 'id', headerName: 'S.No', width: 150, editable: false },
-        { field: 'text', headerName: 'Task', width: 600, editable: true },
+        { field: 'id', headerName: 'S.No', width: 100, editable: false },
+        { field: 'text', headerName: 'Task', width: 500, editable: true },
         { field: 'isCompleted', headerName: 'Status', width: 250, editable: true }
     ]
     const [rows, setRows] = useState([{
@@ -38,6 +38,7 @@ const Todo = () => {
     const [count, setCount] = useState(2);
     return (
         <div>
+            <Container maxWidth="md">
             <Box component="form"
                 noValidate
                 autoComplete="off" >
@@ -56,7 +57,7 @@ const Todo = () => {
             </Box>
             <Grid container justifyContent="center">
                 <TextField value={name}
-                    onChange={(event) => setName(event.target.value)} id="filled-basic" sx={{ flexGrow: 1, alignSelf: 'flex-center', width: '100vh' }} label="Task to be done" variant="outlined" />
+                    onChange={(event) => setName(event.target.value)} id="filled-basic" sx={{ flexGrow: 1, alignSelf: 'flex-center', width: '50vh' }} label="Task to be done" variant="outlined" />
                 &nbsp;  &nbsp;  &nbsp;  &nbsp;
                 <Button onClick={addToDo}
                     variant="contained">Save</Button>
@@ -70,6 +71,7 @@ const Todo = () => {
                     rowsPerPageOptions={[5]}
                 />
             </div>
+            </Container>
         </div>
     );
 }
