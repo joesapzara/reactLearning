@@ -11,19 +11,20 @@ import { DataGrid } from '@mui/x-data-grid';
 
 const Todo = () => {
     const columns = [
-        { field: 'id', headerName: 'S.No', width: 150, editable: true },
+        { field: 'id', headerName: 'S.No', width: 150, editable: false },
         { field: 'text', headerName: 'Task', width: 600, editable: true },
         { field: 'isCompleted', headerName: 'Status', width: 250, editable: true }
-
     ]
+
+    //headerAlign: 'center'
     const [rows, setRows] = useState([{
         id: 1,
-        text: "Create app with MUI",
+        text: "Unit test for todo app ",
         isCompleted: "Yet to be completed",
 
     }]);
     const addToDo = () => {
-        var cnt=count+1;
+        var cnt = count + 1;
         setCount(cnt);
         const temp = [...rows, {
             id: count,
@@ -52,25 +53,24 @@ const Todo = () => {
 
                     </Toolbar>
                 </AppBar>
-                <br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
             </Box>
+            &nbsp;&nbsp;
             <TextField value={name}
                 onChange={(event) => setName(event.target.value)} id="filled-basic" sx={{ flexGrow: 1, alignSelf: 'flex-center', width: '100vh' }} label="Task to be done" variant="outlined" />
             &nbsp;  &nbsp;  &nbsp;  &nbsp;
             <Button onClick={addToDo}
                 variant="contained">Save</Button>
-
+            <br /><br /><br />
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
                     rows={rows}
                     columns={columns}
                     pageSize={5}
                     rowsPerPageOptions={[5]}
-
                 />
             </div>
         </div>
-
     );
 }
 export default Todo;
