@@ -7,6 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { DataGrid } from '@mui/x-data-grid';
+import Grid from "@material-ui/core/Grid";
 
 
 const Todo = () => {
@@ -55,13 +56,16 @@ const Todo = () => {
                 </AppBar>
                 <br /><br /><br /><br /><br />
             </Box>
-            &nbsp;&nbsp;
+           
+            <Grid container justify="center">
             <TextField value={name}
                 onChange={(event) => setName(event.target.value)} id="filled-basic" sx={{ flexGrow: 1, alignSelf: 'flex-center', width: '100vh' }} label="Task to be done" variant="outlined" />
             &nbsp;  &nbsp;  &nbsp;  &nbsp;
+
             <Button onClick={addToDo}
                 variant="contained">Save</Button>
-            <br /><br /><br />
+                </Grid>
+            <br /><br />
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
                     rows={rows}
